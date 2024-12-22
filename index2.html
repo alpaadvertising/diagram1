@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>State Diagram for Regular Expression 2</title>
+  <style>
+    svg {
+      margin: 20px;
+      border: 1px solid #ccc;
+    }
+    circle {
+      fill: #f9f9f9;
+      stroke: #000;
+      stroke-width: 2;
+    }
+    text {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+    path {
+      fill: none;
+      stroke: #000;
+      stroke-width: 2;
+      marker-end: url(#arrowhead);
+    }
+  </style>
+</head>
+<body>
+  <h1>State Diagram for Regular Expression 2</h1>
+  <svg width="700" height="300">
+    <!-- Arrowhead definition -->
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#000"></polygon>
+      </marker>
+    </defs>
+
+    <!-- States -->
+    <circle cx="50" cy="150" r="25"></circle>
+    <text x="42" y="155">q0</text>
+    <circle cx="150" cy="150" r="25"></circle>
+    <text x="142" y="155">q1</text>
+    <circle cx="300" cy="150" r="25"></circle>
+    <text x="292" y="155">q2</text>
+    <circle cx="450" cy="150" r="25"></circle>
+    <text x="442" y="155">q3</text>
+    <circle cx="600" cy="150" r="25" stroke="green" stroke-width="3"></circle>
+    <text x="592" y="155">qf</text>
+
+    <!-- Transitions -->
+    <path d="M75,150 L125,150" marker-end="url(#arrowhead)"></path>
+    <text x="100" y="140">a</text>
+
+    <path d="M175,150 L275,150" marker-end="url(#arrowhead)"></path>
+    <text x="220" y="140">b</text>
+
+    <path d="M325,150 L425,150" marker-end="url(#arrowhead)"></path>
+    <text x="370" y="140">c*</text>
+
+    <path d="M475,150 L575,150" marker-end="url(#arrowhead)"></path>
+    <text x="520" y="140">ab^*c, ab^*</text>
+  </svg>
+</body>
+</html>
